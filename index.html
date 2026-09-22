@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fazendinha da Mariana · 1 aninho</title>
+<meta name="description" content="Convite de aniversário — Fazendinha da Mariana, 1 aninho. 20 de novembro às 19h, JR Festas, Campo Grande RJ.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐷</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf5ea;
+    --gingham-light:#fbe1eb;
+    --gingham-mid:#f6c7da;
+    --rose:#e07fa0;
+    --rose-deep:#c85a80;
+    --brown:#6a4430;
+    --brown-soft:#8a6a54;
+    --green:#7fa15c;
+    --white:#fffdf9;
+    --radius-lg:28px;
+    --radius-md:18px;
+    --shadow:0 12px 30px -10px rgba(150,80,100,.28);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:24px;}
+  body{
+    margin:0;
+    font-family:'Fredoka', system-ui, sans-serif;
+    color:var(--brown);
+    background:
+      repeating-linear-gradient(0deg, var(--gingham-light) 0 28px, var(--cream) 28px 56px),
+      repeating-linear-gradient(90deg, rgba(246,199,218,.55) 0 28px, transparent 28px 56px);
+    background-color:var(--cream);
+    min-height:100%;
+    padding: max(24px, env(safe-area-inset-top)) 16px max(32px, env(safe-area-inset-bottom));
+    display:flex;
+    justify-content:center;
+  }
+
+  .page{
+    width:100%;
+    max-width:560px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    border:6px solid var(--white);
+  }
+  .hero img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+  .balloons{
+    text-align:center;
+    font-size:28px;
+    margin:14px 0 6px;
+    letter-spacing:6px;
+  }
+
+  /* ---------- Intro line ---------- */
+  .intro{
+    text-align:center;
+    font-size:17px;
+    line-height:1.55;
+    color:var(--brown-soft);
+    margin:6px auto 22px;
+    max-width:420px;
+  }
+  .intro strong{color:var(--rose-deep);}
+
+  /* ---------- Info card ---------- */
+  .card{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow);
+    padding:26px 22px;
+    margin-bottom:20px;
+    border:2px dashed var(--gingham-mid);
+  }
+
+  .details{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:22px;
+  }
+  .detail-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-align:left;
+  }
+  .detail-icon{
+    flex:0 0 44px;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--gingham-light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+  }
+  .detail-text .label{
+    display:block;
+    font-size:12.5px;
+    color:var(--rose-deep);
+    font-weight:600;
+    margin-bottom:1px;
+  }
+  .detail-text .value{
+    display:block;
+    font-size:16.5px;
+    font-weight:600;
+    color:var(--brown);
+    line-height:1.3;
+  }
+
+  .btn-row{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  @media (min-width:420px){
+    .btn-row{flex-direction:row;}
+  }
+
+  .btn{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 18px;
+    border-radius:999px;
+    font-family:inherit;
+    font-size:15.5px;
+    font-weight:600;
+    text-decoration:none;
+    cursor:pointer;
+    border:2px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:active{transform:scale(.97);}
+
+  .btn-primary{
+    background:var(--rose-deep);
+    color:var(--white);
+    box-shadow:0 8px 18px -6px rgba(200,90,128,.55);
+  }
+  .btn-primary:hover{background:#b64c71;}
+
+  .btn-secondary{
+    background:var(--white);
+    color:var(--rose-deep);
+    border-color:var(--gingham-mid);
+  }
+  .btn-secondary:hover{background:var(--gingham-light);}
+
+  /* ---------- RSVP section ---------- */
+  #rsvp{
+    scroll-margin-top:20px;
+  }
+
+  .rsvp-header{
+    text-align:center;
+    margin-bottom:18px;
+  }
+  .rsvp-header h2{
+    margin:0 0 4px;
+    font-size:24px;
+    color:var(--rose-deep);
+  }
+  .rsvp-header p{
+    margin:0;
+    font-size:14px;
+    color:var(--brown-soft);
+  }
+  .deadline-chip{
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 14px;
+    background:var(--gingham-light);
+    color:var(--rose-deep);
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+  }
+
+  form{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .field label{
+    display:block;
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--brown);
+    margin-bottom:6px;
+  }
+  .field input[type="text"],
+  .field input[type="tel"]{
+    width:100%;
+    padding:12px 14px;
+    border-radius:var(--radius-md);
+    border:2px solid var(--gingham-mid);
+    background:var(--cream);
+    font-family:inherit;
+    font-size:15px;
+    color:var(--brown);
+  }
+  .field input:focus{
+    outline:none;
+    border-color:var(--rose);
+    background:var(--white);
+  }
+
+  .presence-options{
+    display:flex;
+    gap:10px;
+  }
+  .presence-options input{
+    position:absolute;
+    opacity:0;
+    width:1px;height:1px;
+  }
+  .presence-options label{
+    flex:1;
+    text-align:center;
+    padding:12px 8px;
+    border-radius:var(--radius-md);
+    border:2px solid var(--gingham-mid);
+    background:var(--cream);
+    font-size:14.5px;
+    font-weight:600;
+    cursor:pointer;
+    transition:background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .presence-options input:checked + label{
+    background:var(--rose-deep);
+    border-color:var(--rose-deep);
+    color:var(--white);
+  }
+  .presence-options input:focus-visible + label{
+    outline:2px solid var(--rose-deep);
+    outline-offset:2px;
+  }
+
+  .submit-btn{
+    margin-top:4px;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:999px;
+    background:var(--rose-deep);
+    color:var(--white);
+    font-family:inherit;
+    font-weight:700;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 10px 20px -8px rgba(200,90,128,.6);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .submit-btn:active{transform:scale(.98);}
+  .submit-btn:hover{background:#b64c71;}
+  .submit-btn:disabled{opacity:.6; cursor:not-allowed;}
+
+  .hint{
+    font-size:12px;
+    color:var(--brown-soft);
+    text-align:center;
+    margin-top:2px;
+  }
+
+  .success{
+    display:none;
+    text-align:center;
+    padding:18px;
+    border-radius:var(--radius-md);
+    background:#f0f6e8;
+    border:2px solid #cfe3b8;
+    color:#4c6034;
+    font-weight:600;
+    font-size:14.5px;
+    line-height:1.5;
+  }
+  .success.show{display:block; animation:pop .35s ease;}
+  @keyframes pop{
+    from{opacity:0; transform:translateY(6px) scale(.97);}
+    to{opacity:1; transform:translateY(0) scale(1);}
+  }
+
+  footer{
+    text-align:center;
+    margin-top:8px;
+    padding:10px 0 4px;
+  }
+  footer .sign{
+    font-family:'Caveat', cursive;
+    font-size:26px;
+    color:var(--rose-deep);
+  }
+  footer .tiny{
+    font-size:12px;
+    color:var(--brown-soft);
+    margin-top:2px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <img src="assets/convite-fazendinha-mariana.jpg" alt="Convite Fazendinha da Mariana, 1 aninho, com a aniversariante cercada de bichinhos de fazenda">
+  </div>
+
+  <div class="balloons" aria-hidden="true">🐷 🐔 🐑 🐴 🐮</div>
+
+  <p class="intro">
+    Vem celebrar com a gente! A <strong>Mariana</strong> está completando <strong>1 aninho</strong>
+    e vai ser uma festa cheia de bichinhos, fofura e muito carinho na fazendinha. 🌻
+  </p>
+
+  <div class="card">
+    <div class="details">
+      <div class="detail-row">
+        <div class="detail-icon">📅</div>
+        <div class="detail-text">
+          <span class="label">Data</span>
+          <span class="value">Sexta-feira, 20 de novembro</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-icon">🕖</div>
+        <div class="detail-text">
+          <span class="label">Horário</span>
+          <span class="value">19h</span>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-icon">📍</div>
+        <div class="detail-text">
+          <span class="label">Local</span>
+          <span class="value">JR Festas — Campo Grande, RJ</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn btn-secondary" href="https://maps.app.goo.gl/jtPYnAGGukbMKp838?g_st=ic" target="_blank" rel="noopener">
+        📍 Ver localização
+      </a>
+      <a class="btn btn-primary" href="#rsvp">
+        🐣 Confirmar presença
+      </a>
+    </div>
+  </div>
+
+  <div class="card" id="rsvp">
+    <div class="rsvp-header">
+      <h2>Confirme sua presença</h2>
+      <p>Preencha os dados abaixo para avisar que você vai! 💌</p>
+      <span class="deadline-chip">Confirmar até 01/11</span>
+    </div>
+
+    <form id="rsvp-form">
+      <div class="field">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="telefone">Telefone / WhatsApp</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(21) 90000-0000" required autocomplete="tel" inputmode="tel">
+      </div>
+
+      <div class="field">
+        <label>Você vai comparecer?</label>
+        <div class="presence-options">
+          <input type="radio" id="presenca-sim" name="presenca" value="Sim, vou! 🎉" required>
+          <label for="presenca-sim">Sim, vou! 🎉</label>
+
+          <input type="radio" id="presenca-nao" name="presenca" value="Não poderei ir 😢">
+          <label for="presenca-nao">Não poderei ir 😢</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn">Enviar confirmação</button>
+      <p class="hint">Ao enviar, o WhatsApp vai abrir com sua confirmação prontinha — é só tocar em enviar.</p>
+    </form>
+
+    <div class="success" id="success-msg">
+      Confirmação enviada! Obrigada por fazer parte da festinha da Mariana. 🐮🌸
+    </div>
+  </div>
+
+  <footer>
+    <div class="sign">Com carinho, a família da Mariana</div>
+    <div class="tiny">Fazendinha da Mariana · 1 aninho</div>
+  </footer>
+
+</div>
+
+<script>
+  const WHATSAPP_NUMBER = "5521982813056"; // 21982813056 com DDI do Brasil (55)
+
+  const form = document.getElementById('rsvp-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const successMsg = document.getElementById('success-msg');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const presencaEl = form.querySelector('input[name="presenca"]:checked');
+
+    if (!nome || !telefone || !presencaEl) {
+      alert('Por favor, preencha nome, telefone e confirme sua presença. 🌻');
+      return;
+    }
+
+    const presenca = presencaEl.value;
+
+    const texto =
+      "🐷 Confirmação de presença — Fazendinha da Mariana (1 aninho)\n" +
+      "Nome: " + nome + "\n" +
+      "Telefone: " + telefone + "\n" +
+      "Presença: " + presenca;
+
+    const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(texto);
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Abrindo WhatsApp...";
+
+    successMsg.classList.add('show');
+    successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    window.open(url, '_blank');
+
+    setTimeout(function () {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Enviar confirmação";
+    }, 1800);
+  });
+</script>
+
+</body>
+</html>
